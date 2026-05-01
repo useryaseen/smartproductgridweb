@@ -60,14 +60,14 @@ export default function HomeScreen() {
       />
 
       {state.present.status === 'loading' ? (
-        <div className="rounded-3xl border border-white/10 bg-white/5 px-6 py-14 text-center">
-          <p className="text-sm text-slate-200">Loading products…</p>
+        <div className="rounded-3xl border border-slate-200 bg-white px-6 py-14 text-center shadow-sm">
+          <p className="text-sm text-slate-600">Loading products…</p>
         </div>
       ) : null}
 
       {state.present.status === 'error' ? (
-        <div className="rounded-3xl border border-rose-500/20 bg-rose-500/10 px-6 py-14 text-center">
-          <p className="text-sm text-rose-100">Failed to load: {state.present.error}</p>
+        <div className="rounded-3xl border border-rose-200 bg-rose-50 px-6 py-14 text-center shadow-sm">
+          <p className="text-sm text-rose-700">Failed to load: {state.present.error}</p>
         </div>
       ) : null}
 

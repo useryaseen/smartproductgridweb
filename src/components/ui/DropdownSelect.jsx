@@ -42,9 +42,9 @@ export default function DropdownSelect({
         aria-controls={`${id}-listbox`}
         onClick={() => setOpen((v) => !v)}
         className={[
-          'flex h-10 w-full items-center justify-between gap-2 rounded-xl border border-white/10 bg-white/5 px-3 text-left text-sm text-slate-100',
-          'shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:bg-white/10',
-          'outline-none transition focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/20',
+          'flex h-10 w-full items-center justify-between gap-2 rounded-xl border border-slate-200 bg-white px-3 text-left text-sm text-slate-900 shadow-sm',
+          'hover:bg-slate-50',
+          'outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20',
           buttonClassName,
         ].join(' ')}
       >
@@ -54,7 +54,7 @@ export default function DropdownSelect({
           height="16"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className={['shrink-0 transition', open ? 'rotate-180 text-cyan-200' : 'text-slate-300'].join(' ')}
+          className={['shrink-0 transition', open ? 'rotate-180 text-indigo-600' : 'text-slate-500'].join(' ')}
         >
           <path
             fillRule="evenodd"
@@ -67,8 +67,8 @@ export default function DropdownSelect({
       {open ? (
         <div
           className={[
-            'absolute z-50 mt-2 w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-950/95 backdrop-blur',
-            'shadow-[0_0_0_1px_rgba(255,255,255,0.04),0_30px_100px_-40px_rgba(0,0,0,0.9)]',
+            'absolute z-50 mt-2 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white/95 backdrop-blur',
+            'shadow-[0_0_0_1px_rgba(15,23,42,0.04),0_30px_100px_-45px_rgba(15,23,42,0.25)]',
             'origin-top animate-[sp_dropdown_120ms_ease-out]',
             align === 'right' ? 'right-0' : 'left-0',
           ].join(' ')}
@@ -86,15 +86,15 @@ export default function DropdownSelect({
                     }}
                     className={[
                       'flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm transition',
-                      'focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40',
+                      'focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/30',
                       active
-                        ? 'bg-gradient-to-r from-cyan-400/15 to-indigo-500/10 text-cyan-100'
-                        : 'text-slate-200 hover:bg-white/7',
+                        ? 'bg-gradient-to-r from-indigo-600/10 to-cyan-500/10 text-slate-900'
+                        : 'text-slate-700 hover:bg-slate-50',
                     ].join(' ')}
                   >
                     <span className="truncate">{opt.label}</span>
                     {active ? (
-                      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="text-cyan-200">
+                      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="text-indigo-600">
                         <path
                           fillRule="evenodd"
                           d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.2 7.24a1 1 0 0 1-1.414.004L3.29 9.14a1 1 0 1 1 1.414-1.414l4.1 4.1 6.49-6.53a1 1 0 0 1 1.41-.006Z"

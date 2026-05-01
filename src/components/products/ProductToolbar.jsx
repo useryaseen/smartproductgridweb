@@ -24,18 +24,18 @@ export default function ProductToolbar({
   ]
 
   return (
-    <section className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] sm:p-5">
+    <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-4 shadow-[0_0_0_1px_rgba(15,23,42,0.03),0_20px_60px_-45px_rgba(15,23,42,0.25)] sm:p-5">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <label className="mb-1 block text-xs font-medium text-slate-200">Search by title</label>
+          <label className="mb-1 block text-xs font-medium text-slate-700">Search by title</label>
           <Input value={search} onChange={(e) => onSearch(e.target.value)} placeholder="e.g. backpack, jacket…" />
         </div>
         <div className="lg:col-span-3">
-          <label className="mb-1 block text-xs font-medium text-slate-200">Category</label>
+          <label className="mb-1 block text-xs font-medium text-slate-700">Category</label>
           <DropdownSelect value={category} options={categoryOptions} onChange={onCategory} />
         </div>
         <div className="lg:col-span-2">
-          <label className="mb-1 block text-xs font-medium text-slate-200">Sort</label>
+          <label className="mb-1 block text-xs font-medium text-slate-700">Sort</label>
           <DropdownSelect value={sort} options={sortOptions} onChange={onSort} />
         </div>
         <div className="flex items-end gap-2 lg:col-span-2">
