@@ -1,0 +1,33 @@
+{
+  "name": "buildnetic-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node ./scripts/static-server.mjs",
+    "watch": "node_modules\\@esbuild\\win32-x64\\esbuild.exe src\\main.jsx --bundle --format=esm --outfile=public\\app.js --jsx=automatic --watch",
+    "build": "node_modules\\@esbuild\\win32-x64\\esbuild.exe src\\main.jsx --bundle --format=esm --outfile=public\\app.js --jsx=automatic --minify",
+    "serve": "node ./scripts/static-server.mjs",
+    "preview": "node ./scripts/static-server.mjs",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.14.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.21"
+  }
+}
