@@ -4,11 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node ./scripts/static-server.mjs",
-    "watch": "node_modules\\@esbuild\\win32-x64\\esbuild.exe src\\main.jsx --bundle --format=esm --outfile=public\\app.js --jsx=automatic --watch",
-    "build": "node_modules\\@esbuild\\win32-x64\\esbuild.exe src\\main.jsx --bundle --format=esm --outfile=public\\app.js --jsx=automatic --minify",
-    "serve": "node ./scripts/static-server.mjs",
-    "preview": "node ./scripts/static-server.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint ."
   },
   "dependencies": {

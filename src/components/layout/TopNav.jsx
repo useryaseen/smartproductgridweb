@@ -1,13 +1,12 @@
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../../assets/splogo.png'
 
 export default function TopNav() {
   return (
     <header className="sticky top-0 z-10 border-b border-slate-200/70 bg-white/80 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 text-sm font-bold text-white shadow-sm">
-            SP
-          </span>
+          <img src={logo} alt="Smart Product Grid Logo" className="h-auto w-24" />
           <span className="text-sm font-semibold tracking-tight">Smart Product Grid</span>
         </Link>
         <nav className="flex items-center gap-1 text-sm">
